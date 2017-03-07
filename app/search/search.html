@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<body>
+    <div id="mainHead">
+        <p>Property Manager
+            <p>
+                <h2>Find your dream home!</h2>
+    </div>
+    <div class="container" id="searchFields" ng-controller="searchController as vm">
+        <h1>search for a property</h1>
+        <input type="text" ng-model="vm.city" placeholder="city">
+        <input type="number" ng-model="vm.zip" placeholder="zip">
+        <input type="number" ng-model="vm.minRent" placeholder="min. rent">
+        <input type="number" ng-model="vm.maxRent" placeholder="max. rent">
+        <input type="number" ng-model="vm.nOfBedrooms" placeholder="number of bedrooms">
+        <input type="number" ng-model="vm.nOfBathrooms" placeholder="number of bathrooms">
+        <button id="searchButton" ng-click="vm.searchProperties()">search</button>
+        <div class="container" <div class="center-block">
+            <div>
+                <table id="searchResults" class="table table-bordered ">
+                    <tr ng-repeat="data in vm.propertyResponse">
+                        <td>property title: {{data.propertyName}}</td>
+                        <td>city: {{data.city}}</td>
+                        <td># of bedrooms: {{data.bedroomCount}}</td>
+                        <td># of bathrooms: {{data.BathroomCount}}</td>
+                        <td>pet friendly? {{data.petFriendly}}</td>
+                        <td><a ui-sref="details({propertyId: '{{data.propertyId}}'})">See details</a></td>
+                        <div ui-view></div>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div ng-hide="vm.hideLogin" ng-show="vm.showLogin" class="container" id="login" ng-controller="userController as vm">
+        <h2>Log In</h2>
+        <input type="text" ng-model="vm.userName" placeholder="username">
+        <button id="loginGo" ng-click="vm.login()">Go!</button>
+        <div> <a ui-sref="register">or sign up!</a></div>
+    </div>
+    <div ng-show="vm.logOut">
+        <button ng-click="vm.logOut()"> log out </button>
+    </div>
+</body>

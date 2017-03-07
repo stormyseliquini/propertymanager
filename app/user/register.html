@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<body>
+    <h1 id="registerHead">Join Us Today!</h1>
+    <form>
+        <div id="register" type="container">
+            <div>
+                <input required type="text" ng-model="vm.firstName" placeholder="first name">
+                <input required type="text" ng-model="vm.lastName" placeholder="last name">
+            </div>
+            <div>
+                <input required type="text" ng-model="vm.createUserName" placeholder="username">
+                <input required type="email" ng-model="vm.createEmail" placeholder="email">
+            </div>
+            <input class="largerCheckbox" name='selectAll' type='checkbox' ng-model="vm.isPropertyManager" value='TRUE'>
+            <span>Landlord?</span>
+            <div>
+                <button id="signUp" ng-click="vm.entryCheck()">sign up!</button>
+            </div>
+            <div id="invalidUserName">{{vm.invalidUserName}}</div>
+        </div>
+        <div class="container" id="backToSearch"> <a ui-sref="search">back to search</a></div>
+        <div ui-view></div>
+    </form>
+</body>

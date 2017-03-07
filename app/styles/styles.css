@@ -1,0 +1,108 @@
+#mainHead {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-size: 6em;
+    width: 65%;
+}
+
+#searchFields {
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: lightgrey;
+    text-align: center;
+    height: 10em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#searchButton {
+    margin: auto;
+    margin-top: 2.5%;
+    width: 50%;
+}
+
+#searchResults {
+    margin: auto;
+    margin-top: 5%;
+    width: 75%;
+}
+
+#login {
+    font-size: 2em;
+    text-align: center;
+    width: 20%;
+    height: 21%;
+    border-radius: 5px;
+    background-color: lightblue;
+    margin: auto;
+    margin-right: 20px;
+    position: absolute;
+    padding-left: 10px;
+    top: 0;
+    left: 85%;
+    bottom: 75%;
+    right: 0;
+}
+
+#loginGo {
+    margin-top: 1%;
+    width: 50%;
+}
+
+#register {
+    border-radius: 10px;
+    font-size: 2em;
+    padding-top: 2%;
+    background-color: lightgrey;
+    height: 45%;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#registerHead {
+    font-size: 10em;
+    text-align: center;
+}
+
+#signUp {
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: center;
+    width: 60%;
+}
+
+.largerCheckbox {
+    width: 5%;
+    height: 15%;
+}
+
+#backToSearch {
+    font-size: 2em;
+    border-radius: 10px;
+    text-align: center;
+    height: 10em;
+    margin: auto;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#invalidUserName {
+    postion: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: red;
+}

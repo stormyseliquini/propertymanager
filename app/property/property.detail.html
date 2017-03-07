@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<body ng-controller="propertyController as vm">
+    <div class="container">
+        <h1> Add a Property </h1>
+        <input type="text" ng-model="vm.newName" placeholder="property name">
+        <input type="text" ng-model="vm.newAddress" placeholder="address">
+        <input type="text" ng-model="vm.newCity" placeholder="city">
+        <input type="text" ng-model="vm.newState" placeholder="state">
+        <input type="number" ng-model="vm.newZip" placeholder="zip code">
+        <input type="text" ng-model="vm.newPhone" placeholder="contact phone number">
+        <input type="number" ng-model="vm.newRent" placeholder="rent">
+        <input type="number" ng-model="vm.newSqrFt" placeholder="square footage">
+        <input type="number" ng-model="vm.newLeaseTerm" placeholder="lease term">
+        <input type="number" ng-model="vm.newBedroomCount" placeholder="# of bedrooms">
+        <input type="number" ng-model="vm.newBathroomCount" placeholder="# of bathrooms">
+        <input type="text" ng-model="vm.newImage" placeholder="Image">
+        <input type="checkbox" ng-model="vm.newPetFriendly">Pet friendly?
+        <button ng-click="vm.addProperty()">Add</button>
+    </div>
+    <h1>My Properties</h1>
+    <div class="container" <div class="center-block">
+        <div>
+            <table id="searchResults" class="table table-bordered ">
+                <tr ng-repeat="data in vm.landlordProperties">
+                    <td>property title: {{data.propertyName}}</td>
+                    <td>address : {{data.address}}</td>
+                    <td>zip code: {{data.zip}}</td>
+                    <td>city: {{data.city}}</td>
+                    <td>state: {{data.state}}</td>
+                    <td># of bedrooms: {{data.bedroomCount}}</td>
+                    <td># of bathrooms: {{data.BathroomCount}}</td>
+                    <td>contact phone: {{data.contactPhone}}</td>
+                    <td>pet friendly? {{data.petFriendly}}</td>
+                    <td>image {{data.propertyImage}}</td>
+                    <td>
+                        <button ng-click="vm.deleteProperty(data.propertyId)">delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container" id="backToSearch"> <a ui-sref="search">back to search</a></div>
+    <div ui-view></div>
+</body>

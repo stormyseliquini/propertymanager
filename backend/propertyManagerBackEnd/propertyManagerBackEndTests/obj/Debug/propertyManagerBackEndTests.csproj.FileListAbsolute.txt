@@ -1,0 +1,1 @@
+C:\dev\propertyManager\backend\propertyManagerBackEnd\propertyManagerBackEndTests\obj\Debug\propertyManagerBackEndTests.csprojResolveAssemblyReference.cache

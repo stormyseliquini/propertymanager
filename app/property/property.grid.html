@@ -1,0 +1,18 @@
+<div>
+    <table id="searchResults" class="table table-bordered ">
+        <tr>
+            <td>property title: {{vm.detailResponse.propertyName}}</td>
+            <td>address : {{vm.detailResponse.address}}</td>
+            <td>zip code: {{vm.detailResponse.zip}}</td>
+            <td>city: {{vm.detailResponse.city}}</td>
+            <td>state: {{vm.detailResponse.state}}</td>
+            <td># of bedrooms: {{vm.detailResponse.bedroomCount}}</td>
+            <td># of bathrooms: {{vm.detailResponse.BathroomCount}}</td>
+            <td>contact phone: {{vm.detailResponse.contactPhone}}</td>
+            <td>pet friendly? {{vm.detailResponse.petFriendly}}</td>
+            <td>image {{vm.detailResponse.propertyImage}}</td>
+        </tr>
+    </table>
+</div>
+<div>{{vm.propertyResponse}}</div>
+<div ui-view></div>
